@@ -128,3 +128,5 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+netflixclone/src/assets/video.mp4
+netflixclone/src/utils/constants.js
