@@ -7,17 +7,15 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-
-mongoose
-  .connect("mongodb://localhost:27017/netflix", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+const url = "mongodb+srv://ali:123@cluster0.fjfykq0.mongodb.net/?retryWrites=true&w=majority";
+mongoose.connect(url)
   .then(() => {
-    console.log("DB Connetion Successfull");
+    console.log("DB Connection Successfull");
+  
   })
   .catch((err) => {
     console.log(err.message);
+    console.log("No bueno");
   });
 
 app.use("/api/user", userRoutes);
